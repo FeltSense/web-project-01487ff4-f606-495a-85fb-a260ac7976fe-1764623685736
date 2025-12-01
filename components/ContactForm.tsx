@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { motion } from 'framer-motion';
 import { Send, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactForm() {
@@ -48,13 +47,7 @@ export default function ContactForm() {
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-600/30 to-transparent" />
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="inline-block text-emerald-400 font-semibold text-sm tracking-wider uppercase mb-4">
             Get Started Today
           </span>
@@ -64,17 +57,11 @@ export default function ContactForm() {
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Join 500+ enterprise teams already using CIP to unlock actionable insights from their communication data.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Contact Info Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-2 space-y-8"
-          >
+          <div className="lg:col-span-2 space-y-8">
             <div>
               <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-[1.3] text-white mb-4">
                 Ready to see CIP in action?
@@ -121,16 +108,10 @@ export default function ContactForm() {
                 <span className="text-emerald-400 font-medium">Enterprise-ready</span> — SOC 2 Type II certified, GDPR compliant, and trusted by Fortune 500 companies.
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Form Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-3"
-          >
+          <div className="lg:col-span-3">
             {status === 'success' ? (
               <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-12 text-center">
                 <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
@@ -199,9 +180,9 @@ export default function ContactForm() {
                 </p>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
-  </div></div>);
+  );
 }
