@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="absolute inset-0 bg-violet-600/10 rounded-3xl blur-3xl" />
           <div className="relative bg-slate-900/50 border border-slate-800 rounded-3xl p-12 md:p-16 text-center">
             <h3 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1] text-white mb-4">
-              Ready to unlock your team's potential?
+              Ready to unlock your team&apos;s potential?
             </h3>
             <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
               Join 2,500+ enterprises using CIP to transform workplace communication into actionable insights.
@@ -158,5 +158,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  </div></span>);
+  );
 }
